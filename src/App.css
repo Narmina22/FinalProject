@@ -2,8 +2,10 @@ body {
   background-color: #141414;
   color: #ffffff;
 }
+h1 {
+  text-shadow: 1px 1px 2px black, 0 0 10px blue, 0 0 5px darkblue;
+}
 .movie-app > .row {
-  /* overflow-x: auto; */
   flex-wrap: nowrap;
 }
 .row>* {
@@ -12,10 +14,15 @@ body {
 .image-container {
   position: relative;
   transition: transform 0.2s;
+  margin: 3px;
 }
 .image-container:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+img {
+  width: 85%;
+  border-radius: 10px;
 }
 .image-container:hover .overlay {
   opacity: 1;
@@ -23,11 +30,73 @@ body {
 .overlay {
   position: absolute;
   background: rgb(0, 0, 0, 0.8);
-  width: 100%;
+  width: 79%;
+  border-radius: 0 0 10px 10px;
   transition: 0.5s ease;
   opacity: 0;
   bottom: 0;
   font-size: 20px;
   padding: 20px;
   text-align: center;
+}
+.myInput {
+  margin-left: 30%;
+}
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.remove {
+  margin-left: 2%;
+  display: flex;
+}
+.container-fluid {
+  width: 100%;
+}
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  img {
+    width: 75%;
+  }
+  .overlay {
+    width: 69.5%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 426px) {
+  img {
+    width: 68%;
+  }
+  .overlay {
+    width: 63%;
+  }
+  h1 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 370px) {
+  img {
+    width: 63%;
+  }
+  .overlay {
+    width: 58.5%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 369px) and (min-width: 0px) {
+  img {
+    width: 58%;
+  }
+  .overlay {
+    width: 54%;
+  }
+  h1 {
+    font-size: 21px;
+  }
 }
