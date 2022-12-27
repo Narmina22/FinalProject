@@ -28,10 +28,10 @@ const App = () => {
     }, [searchValue])
 
     const addFavouriteMovie = (movie) => {
-        const newFavouriteList = [...favourites, movie]
+        const newFavouriteList = [...favourites.filter((favourite)=> favourite.imdbID !== movie.imdbID), movie]
         setFavourites(newFavouriteList)
     }
-
+    
     const removeFavouriteMovie = (movie) => {
         const newFavouriteList = favourites.filter((favourite)=> favourite.imdbID !== movie.imdbID)
         setFavourites(newFavouriteList)
